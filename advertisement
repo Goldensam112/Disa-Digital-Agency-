@@ -1,0 +1,186 @@
+from pathlib import Path
+
+html = r'''<!-- DISA DIGITAL AGENCY - Blogger Landing Page -->
+<style>
+  #disa-page{font-family:"Noto Sans Devanagari","Nirmala UI",Mangal,Arial,sans-serif;color:#24231f;background:#fff;line-height:1.65;margin:0 auto;max-width:1120px}
+  #disa-page *{box-sizing:border-box}
+  #disa-page a{text-decoration:none}
+  #disa-page .d-wrap{padding:0 18px}
+  #disa-page .d-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid #eee8dc}
+  #disa-page .d-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.2px}
+  #disa-page .d-logo{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#f4df9d,#b8892e);color:#211a0d;font-weight:900;font-size:20px}
+  #disa-page .d-topcta{display:inline-flex;align-items:center;justify-content:center;background:#159653;color:#fff;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:800}
+  #disa-page .d-hero{padding:48px 0 34px;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:30px}
+  #disa-page .d-kicker{display:inline-block;background:#fff5d9;color:#7c5a13;border:1px solid #f0dfb0;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:800;margin-bottom:15px}
+  #disa-page h1{font-size:clamp(30px,4.2vw,48px);line-height:1.25;letter-spacing:-.6px;margin:0 0 16px;color:#201d17}
+  #disa-page h1 span{color:#a87920}
+  #disa-page .d-lead{font-size:17px;color:#5b554a;margin:0 0 22px}
+  #disa-page .d-actions{display:flex;flex-wrap:wrap;gap:10px}
+  #disa-page .d-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:49px;padding:13px 18px;border-radius:12px;font-size:15px;font-weight:800;text-align:center;transition:transform .18s ease,box-shadow .18s ease}
+  #disa-page .d-btn:hover{transform:translateY(-2px);box-shadow:0 7px 18px #00000012}
+  #disa-page .d-green{background:#159653;color:#fff}
+  #disa-page .d-light{border:1px solid #e4d8be;background:#fff;color:#4d3b18}
+  #disa-page .d-trust{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:20px;color:#625b4e;font-size:13px}
+  #disa-page .d-trust span:before{content:"✓";color:#159653;font-weight:900;margin-right:6px}
+  #disa-page .d-visual{position:relative;background:linear-gradient(145deg,#fffaf0,#f4ead4);border:1px solid #eadcc0;border-radius:26px;padding:25px;overflow:hidden;min-height:310px}
+  #disa-page .d-visual:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#ead19a55;right:-55px;top:-65px}
+  #disa-page .d-visual h3{position:relative;margin:0 0 6px;font-size:22px}
+  #disa-page .d-visual p{position:relative;color:#6a604e;margin:0 0 18px;font-size:14px}
+  #disa-page .d-mini-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  #disa-page .d-mini{background:#fff;border:1px solid #eee4d1;border-radius:15px;padding:16px 12px;min-height:105px}
+  #disa-page .d-mini b{display:block;font-size:15px;margin-top:7px}
+  #disa-page .d-emoji{font-size:25px}
+  #disa-page .d-section{padding:42px 0}
+  #disa-page .d-section-head{text-align:center;max-width:720px;margin:0 auto 25px}
+  #disa-page .d-eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#9b7427;font-weight:900}
+  #disa-page h2{font-size:clamp(25px,3vw,34px);line-height:1.3;margin:8px 0 10px;color:#242119}
+  #disa-page .d-section-head p{font-size:16px;color:#686154;margin:0}
+  #disa-page .d-services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  #disa-page .d-card{border:1px solid #eee7da;border-radius:19px;padding:23px;background:#fff;box-shadow:0 5px 22px #30250a08;display:flex;flex-direction:column;align-items:flex-start}
+  #disa-page .d-card-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:#fff5db;font-size:27px;margin-bottom:13px}
+  #disa-page .d-card h3{font-size:21px;margin:0 0 8px;line-height:1.35}
+  #disa-page .d-card p{color:#625b50;font-size:15px;margin:0 0 18px}
+  #disa-page .d-card .d-btn{width:100%;margin-top:auto}
+  #disa-page .d-band{background:#201f1b;color:#fff;border-radius:24px;padding:30px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px}
+  #disa-page .d-band h2{color:#f1d58e;margin:0 0 8px}
+  #disa-page .d-band p{color:#e0dbd0;margin:0}
+  #disa-page .d-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  #disa-page .d-step{background:#faf8f3;border:1px solid #eee6d6;border-radius:16px;padding:20px}
+  #disa-page .d-num{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#e9d39b;color:#382b0e;font-weight:900;margin-bottom:10px}
+  #disa-page .d-step h3{font-size:17px;margin:0 0 6px}
+  #disa-page .d-step p{font-size:14px;color:#6b6459;margin:0}
+  #disa-page .d-final{margin:24px 0 0;background:linear-gradient(135deg,#fff8e8,#f7edda);border:1px solid #ead8b2;border-radius:24px;padding:32px 22px;text-align:center}
+  #disa-page .d-final h2{margin-top:0}
+  #disa-page .d-final p{color:#615747;max-width:650px;margin:0 auto 20px}
+  #disa-page .d-phone{display:block;margin-top:14px;font-weight:900;color:#342a17;font-size:18px}
+  #disa-page .d-foot{text-align:center;color:#777064;font-size:13px;padding:24px 0 32px}
+  #disa-page .d-wa-float{position:fixed;z-index:9999;right:16px;bottom:16px;background:#159653;color:#fff!important;border-radius:999px;padding:13px 17px;box-shadow:0 8px 24px #0003;font-weight:900;font-size:14px}
+  #disa-page .d-note{font-size:12px;color:#756d60;text-align:center;margin-top:12px}
+  @media(max-width:760px){
+    #disa-page .d-wrap{padding:0 15px}
+    #disa-page .d-top{padding:12px 0}
+    #disa-page .d-brand{font-size:15px;gap:8px}
+    #disa-page .d-logo{width:37px;height:37px;font-size:18px;border-radius:11px}
+    #disa-page .d-topcta{font-size:12px;padding:9px 11px}
+    #disa-page .d-hero{grid-template-columns:1fr;gap:20px;padding:34px 0 24px}
+    #disa-page h1{font-size:32px;line-height:1.28}
+    #disa-page .d-lead{font-size:16px}
+    #disa-page .d-actions{display:grid;grid-template-columns:1fr}
+    #disa-page .d-btn{width:100%;min-height:50px;font-size:15px}
+    #disa-page .d-visual{min-height:auto;padding:20px;border-radius:20px}
+    #disa-page .d-section{padding:30px 0}
+    #disa-page .d-services{grid-template-columns:1fr;gap:13px}
+    #disa-page .d-card{padding:20px}
+    #disa-page .d-band{grid-template-columns:1fr;padding:24px 19px;text-align:center}
+    #disa-page .d-steps{grid-template-columns:1fr}
+    #disa-page .d-final{padding:26px 17px}
+    #disa-page .d-wa-float{right:12px;bottom:12px;padding:12px 15px}
+  }
+  @media(prefers-reduced-motion:reduce){#disa-page .d-btn{transition:none}}
+</style>
+
+<div id="disa-page">
+  <div class="d-wrap">
+    <header class="d-top">
+      <div class="d-brand"><span class="d-logo">D</span><span>DISA DIGITAL AGENCY</span></div>
+      <a class="d-topcta" href="https://wa.me/919630958789?text=Namaste%20Disa%20Digital%20Agency%2C%20mujhe%20free%20consultation%20chahiye." target="_blank" rel="noopener">WhatsApp पर बात करें</a>
+    </header>
+
+    <section class="d-hero">
+      <div>
+        <span class="d-kicker">✦ निःशुल्क शुरुआती परामर्श</span>
+        <h1>क्या आप भी चाहते हैं कि आपका बिज़नेस <span>Google और पूरी दुनिया में दिखाई दे?</span></h1>
+        <p class="d-lead">अपने बिज़नेस को डिजिटल पहचान दिलाएँ। प्रोफेशनल वेबसाइट बनवाएँ, मोबाइल ऐप लॉन्च करें और Google Ads व Meta Ads के ज़रिए सही ग्राहकों तक पहुँचने की कोशिश करें।</p>
+        <div class="d-actions">
+          <a class="d-btn d-green" href="https://wa.me/919630958789?text=Namaste%20Disa%20Digital%20Agency%2C%20mujhe%20apne%20business%20ke%20liye%20free%20initial%20consultation%20chahiye." target="_blank" rel="noopener">💬 WhatsApp पर फ्री कंसल्टेशन लें</a>
+          <a class="d-btn d-light" href="#disa-services">अपनी सर्विस चुनें ↓</a>
+        </div>
+        <div class="d-trust"><span>मोबाइल-फ्रेंडली समाधान</span><span>आपकी ज़रूरत के अनुसार सलाह</span><span>सीधी WhatsApp बातचीत</span></div>
+      </div>
+      <div class="d-visual">
+        <h3>आपका बिज़नेस, डिजिटल दुनिया में</h3>
+        <p>अपनी ज़रूरत चुनें और हमसे सीधे बात करें।</p>
+        <div class="d-mini-grid">
+          <div class="d-mini"><span class="d-emoji">🌐</span><b>वेबसाइट</b><small>ऑनलाइन पहचान</small></div>
+          <div class="d-mini"><span class="d-emoji">📱</span><b>मोबाइल ऐप</b><small>आपका ऐप आइडिया</small></div>
+          <div class="d-mini"><span class="d-emoji">🎯</span><b>Google & Meta Ads</b><small>विज्ञापन और लीड्स</small></div>
+          <div class="d-mini"><span class="d-emoji">📍</span><b>Google Business</b><small>लोकल ऑनलाइन मौजूदगी</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="d-section" id="disa-services">
+      <div class="d-section-head">
+        <span class="d-eyebrow">हमारी सेवाएँ</span>
+        <h2>आपको कौन-सी सर्विस चाहिए?</h2>
+        <p>नीचे अपनी ज़रूरत चुनें। WhatsApp पर आपका मैसेज तैयार मिलेगा—बस अपनी जानकारी भेजें।</p>
+      </div>
+      <div class="d-services">
+        <article class="d-card">
+          <div class="d-card-icon">🌐</div>
+          <h3>वेबसाइट बनवाएँ</h3>
+          <p>क्या आपका बिज़नेस अभी ऑनलाइन नहीं है? एक प्रोफेशनल वेबसाइट के ज़रिए अपनी सेवाएँ, प्रोडक्ट और संपर्क की जानकारी ग्राहकों तक पहुँचाएँ।</p>
+          <a class="d-btn d-green" href="https://wa.me/919630958789?text=Namaste%20Disa%20Digital%20Agency%2C%20mujhe%20apne%20business%20ke%20liye%20website%20banwani%20hai.%20Please%20mujhe%20details%20batayein." target="_blank" rel="noopener">मेरी वेबसाइट बनवानी है →</a>
+        </article>
+        <article class="d-card">
+          <div class="d-card-icon">📱</div>
+          <h3>मोबाइल ऐप बनवाएँ</h3>
+          <p>क्या आपके पास ऐप का आइडिया है? अपने बिज़नेस के लिए Android या दूसरी ऐप डेवलपमेंट की संभावनाओं पर चर्चा करें।</p>
+          <a class="d-btn d-green" href="https://wa.me/919630958789?text=Namaste%20Disa%20Digital%20Agency%2C%20mujhe%20apne%20business%20ke%20liye%20mobile%20app%20banwana%20hai.%20Please%20mujhe%20process%20aur%20details%20batayein." target="_blank" rel="noopener">मुझे अपना ऐप बनवाना है →</a>
+        </article>
+        <article class="d-card">
+          <div class="d-card-icon">🎯</div>
+          <h3>Google Ads और Meta Ads</h3>
+          <p>अपने बिज़नेस के लिए विज्ञापन चलवाना चाहते हैं? अपने लक्ष्य के अनुसार campaign strategy, audience और lead generation पर बात करें।</p>
+          <a class="d-btn d-green" href="https://wa.me/919630958789?text=Namaste%20Disa%20Digital%20Agency%2C%20mujhe%20apne%20business%20ke%20liye%20Google%20Ads%20ya%20Meta%20Ads%20chalwane%20hain.%20Please%20mujhe%20details%20batayein." target="_blank" rel="noopener">मुझे विज्ञापन चलवाने हैं →</a>
+        </article>
+        <article class="d-card">
+          <div class="d-card-icon">📍</div>
+          <h3>Google पर बिज़नेस दिखाएँ</h3>
+          <p>क्या आप चाहते हैं कि स्थानीय ग्राहक Google Search और Maps पर आपके बिज़नेस को खोज सकें? Google Business Profile सेटअप में सहायता लें।</p>
+          <a class="d-btn d-green" href="https://wa.me/919630958789?text=Namaste%20Disa%20Digital%20Agency%2C%20mujhe%20apna%20business%20Google%20Search%20aur%20Maps%20par%20dikhane%20ke%20liye%20Google%20Business%20Profile%20setup%20karwana%20hai." target="_blank" rel="noopener">मेरा बिज़नेस Google पर दिखाएँ →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="d-section">
+      <div class="d-band">
+        <div>
+          <h2>आपका आइडिया, हमारी डिजिटल एक्सपर्टीज़! 🚀</h2>
+          <p>वेबसाइट, ऐप या ऑनलाइन विज्ञापन—अपनी ज़रूरत बताइए और शुरुआती परामर्श के लिए हमसे संपर्क कीजिए।</p>
+        </div>
+        <a class="d-btn d-green" href="https://wa.me/919630958789?text=Namaste%20Disa%20Digital%20Agency%2C%20main%20apne%20business%20ko%20online%20grow%20karna%20chahta%20hoon.%20Mujhe%20free%20initial%20consultation%20chahiye." target="_blank" rel="noopener">अभी बात करें ↗</a>
+      </div>
+    </section>
+
+    <section class="d-section">
+      <div class="d-section-head">
+        <span class="d-eyebrow">आसान प्रक्रिया</span>
+        <h2>शुरुआत कैसे करें?</h2>
+      </div>
+      <div class="d-steps">
+        <div class="d-step"><div class="d-num">1</div><h3>अपनी सर्विस चुनें</h3><p>बताएँ कि आपको वेबसाइट, ऐप, विज्ञापन या Google Business Profile में किस तरह की मदद चाहिए।</p></div>
+        <div class="d-step"><div class="d-num">2</div><h3>WhatsApp पर बात करें</h3><p>अपनी ज़रूरत, बिज़नेस और लक्ष्य की जानकारी हमें भेजें।</p></div>
+        <div class="d-step"><div class="d-num">3</div><h3>अगले कदम समझें</h3><p>आपकी आवश्यकता के अनुसार संभावित समाधान, प्रक्रिया और कीमत पर चर्चा करें।</p></div>
+      </div>
+      <div class="d-final">
+        <span class="d-kicker">आपके बिज़नेस के लिए</span>
+        <h2>डिजिटल शुरुआत आज ही करें!</h2>
+        <p>अपनी requirement हमें WhatsApp पर भेजें। हम आपकी ज़रूरत समझकर शुरुआती परामर्श देंगे।</p>
+        <a class="d-btn d-green" href="https://wa.me/919630958789?text=Namaste%20Disa%20Digital%20Agency%2C%20mujhe%20apne%20business%20ke%20liye%20digital%20services%20ki%20details%20chahiye." target="_blank" rel="noopener">💬 WhatsApp पर संपर्क करें</a>
+        <a class="d-phone" href="tel:+919630958789">📞 9630958789</a>
+        <div class="d-note">निःशुल्क शुरुआती परामर्श। सेवाओं की कीमत और उपलब्धता आपकी आवश्यकता के अनुसार तय होगी।</div>
+      </div>
+    </section>
+
+    <footer class="d-foot">© <span id="disa-year">2026</span> DISA DIGITAL AGENCY · आपके बिज़नेस की डिजिटल पहचान</footer>
+  </div>
+  <a class="d-wa-float" href="https://wa.me/919630958789?text=Namaste%20Disa%20Digital%20Agency%2C%20mujhe%20digital%20services%20ke%20baare%20mein%20baat%20karni%20hai." target="_blank" rel="noopener" aria-label="WhatsApp पर संपर्क करें">☘ WhatsApp करें</a>
+</div>
+<script>
+  (function(){var y=document.getElementById('disa-year');if(y)y.textContent=new Date().getFullYear();})();
+</script>
+'''
+path = Path("/mnt/data/disa_digital_agency_blogger_landing_page.html")
+path.write_text(html, encoding="utf-8")
+print(f"Created: {path}\nSize: {path.stat().st_size} bytes")
