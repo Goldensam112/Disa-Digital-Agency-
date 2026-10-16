@@ -1,294 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ffffff">
-  <title>Disa Digital Agency | Digital Marketing, Website & App Development</title>
-  <meta name="description" content="Disa Digital Agency helps businesses grow with website development, mobile apps, Google Ads, Meta Ads, SEO, branding, social media marketing and automation solutions.">
-  <meta name="keywords" content="Disa Digital Agency, digital marketing agency, website development, app development, Google Ads, Meta Ads, SEO services, branding, lead generation, Bhopal">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://disadigital.online/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Disa Digital Agency | Build. Market. Grow.">
-  <meta property="og:description" content="One partner for digital marketing, websites, apps, branding and business growth.">
-  <meta property="og:url" content="https://disadigital.online/">
-  <meta property="og:image" content="https://disadigital.online/og-image.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--ink:#151515;--muted:#66645f;--gold:#bd9145;--gold2:#e4c782;--cream:#faf8f3;--line:#e9e5dc;--green:#146c43;--white:#fff;--shadow:0 18px 55px rgba(27,25,19,.08);--radius:22px}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:90px}
-    body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%}
-    .container{width:min(1160px,calc(100% - 40px));margin:auto}
-    .announcement{background:#171714;color:#fff;text-align:center;padding:9px 14px;font-size:12px;letter-spacing:.04em}
-    .announcement a{color:var(--gold2);font-weight:700}
-    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(233,229,220,.85)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:22px;min-height:78px}
-    .brand{display:flex;align-items:center;gap:11px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.04em;font-size:20px}
-    .brand-mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#f4e4b9,#b88635);display:grid;place-items:center;color:#171714;font-size:18px;font-weight:800;box-shadow:0 6px 16px #bd914533}
-    .brand small{display:block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#8a6b35;margin-top:-3px}
-    .nav-links{display:flex;align-items:center;gap:24px;font-size:13px;font-weight:700;color:#45433e}
-    .nav-links a:hover{color:var(--gold)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 20px;font-weight:700;font-size:13px;transition:.2s ease;border:1px solid transparent;cursor:pointer}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-dark{background:#171714;color:white}
-    .btn-gold{background:linear-gradient(135deg,#e8cf92,#b98532);color:#171714}
-    .btn-outline{border-color:#d9d3c6;background:#fff}
-    .menu-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:12px;width:44px;height:44px;font-size:22px}
-    .hero{padding:82px 0 74px;background:radial-gradient(circle at 88% 15%,#f5e9ca 0,transparent 28%),linear-gradient(180deg,#fff 0%,#fbfaf7 100%);overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:58px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:#86652d;background:#f7f0df;border:1px solid #ead9b4;border-radius:999px;padding:7px 12px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-    .dot{width:7px;height:7px;border-radius:50%;background:#1d925c;box-shadow:0 0 0 4px #1d925c1a}
-    h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.14;letter-spacing:-.045em;margin:0}
-    h1{font-size:clamp(40px,5vw,67px);margin:22px 0 20px;font-weight:800}
-    h1 span{background:linear-gradient(100deg,#a77725,#d7b56d);background-clip:text;-webkit-background-clip:text;color:transparent}
-    .lead{font-size:17px;max-width:590px;color:var(--muted);line-height:1.8}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}
-    .trustline{display:flex;gap:20px;flex-wrap:wrap;margin-top:27px;color:#65615a;font-size:12px;font-weight:600}
-    .trustline span{display:flex;align-items:center;gap:7px}
-    .check{color:#16804e;font-weight:900}
-    .hero-visual{position:relative;min-height:430px;border-radius:30px;background:#181916;padding:27px;box-shadow:0 28px 75px #211d1530;overflow:hidden}
-    .visual-orb{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,#d7b66e55,transparent 70%);right:-55px;top:-80px}
-    .visual-top{display:flex;align-items:center;justify-content:space-between;color:#fff;font-size:12px;position:relative}
-    .live-pill{border:1px solid #ffffff2b;background:#ffffff0c;border-radius:999px;padding:6px 10px;color:#e5d2a1;font-size:10px}
-    .dashboard{position:relative;margin-top:28px;border:1px solid #ffffff22;border-radius:20px;background:#242520;padding:22px}
-    .dash-label{color:#b7b6ad;font-size:11px}
-    .dash-title{font-size:23px;color:white;font-weight:800;font-family:Manrope,sans-serif;margin:3px 0 18px}
-    .metric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .metric{background:#ffffff08;border:1px solid #ffffff12;border-radius:14px;padding:15px}
-    .metric strong{display:block;color:#e6ca83;font-family:Manrope,sans-serif;font-size:20px}
-    .metric span{color:#c6c5be;font-size:11px}
-    .chart{height:90px;display:flex;align-items:end;gap:7px;margin-top:18px;padding:0 4px}
-    .chart i{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(180deg,#e6ca83,#b98b3e);opacity:.9}
-    .floating-note{position:absolute;right:15px;bottom:18px;background:#fff;border:1px solid var(--line);border-radius:15px;padding:12px 15px;box-shadow:var(--shadow);font-size:11px;font-weight:700}
-    .floating-note b{display:block;color:#15804c;font-size:16px}
-    .section{padding:82px 0}
-    .section-soft{background:var(--cream)}
-    .section-head{max-width:720px;margin-bottom:35px}
-    .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.17em;color:#987337;font-weight:800;margin-bottom:12px}
-    h2{font-size:clamp(30px,4vw,45px);margin-bottom:15px}
-    .section-head p,.section-copy{color:var(--muted);margin:0;font-size:15px;line-height:1.8}
-    .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .service-card{border:1px solid var(--line);border-radius:var(--radius);padding:23px;background:#fff;transition:.25s;display:flex;flex-direction:column;min-height:265px}
-    .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#ddc58e}
-    .service-icon{width:49px;height:49px;border-radius:15px;background:#f7f0df;display:grid;place-items:center;font-size:22px;margin-bottom:21px}
-    .service-card h3{font-size:18px;letter-spacing:-.025em;margin-bottom:11px}
-    .service-card p{color:var(--muted);font-size:13px;line-height:1.75;margin:0 0 16px}
-    .service-card a{font-size:12px;font-weight:800;color:#8b6628;margin-top:auto}
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-    .feature-panel{background:#191a16;border-radius:28px;padding:30px;color:#fff;position:relative;overflow:hidden}
-    .feature-panel h3{font-size:27px;margin-bottom:13px}
-    .feature-panel p{color:#c5c4bc;font-size:14px}
-    .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:23px}
-    .feature-list div{border:1px solid #ffffff1d;background:#ffffff08;border-radius:13px;padding:13px;font-size:12px;color:#f2e8d0}
-    .bullet-list{display:grid;gap:14px;margin-top:25px}
-    .bullet{display:flex;gap:12px;align-items:flex-start}
-    .bullet-mark{width:25px;height:25px;flex:none;border-radius:50%;display:grid;place-items:center;background:#eaf5ee;color:#197647;font-weight:900;font-size:12px}
-    .bullet strong{display:block;font-size:14px;margin-bottom:3px}
-    .bullet p{margin:0;color:var(--muted);font-size:13px}
-    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-    .process-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:white}
-    .process-no{font-family:Manrope,sans-serif;font-size:31px;font-weight:800;color:#d3b46f;margin-bottom:14px}
-    .process-card h3{font-size:17px;margin-bottom:9px}
-    .process-card p{font-size:13px;color:var(--muted);margin:0;line-height:1.7}
-    .industries{display:flex;gap:10px;flex-wrap:wrap}
-    .industry{padding:10px 14px;border-radius:999px;border:1px solid #e6dfd1;background:#fff;font-size:12px;font-weight:700;color:#555148}
-    .cta-band{background:linear-gradient(110deg,#1b1c17,#28271f);border-radius:28px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:25px;color:#fff}
-    .cta-band h2{font-size:clamp(28px,3.6vw,40px);max-width:650px;margin-bottom:10px}
-    .cta-band p{color:#c7c5bb;margin:0;font-size:14px}
-    .faq-list{display:grid;gap:12px;max-width:850px}
-    details{border:1px solid var(--line);border-radius:15px;padding:17px 19px;background:#fff}
-    summary{font-weight:800;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:15px}
-    summary:after{content:"+";font-size:20px;color:#a67b32;line-height:1}
-    details[open] summary:after{content:"−"}
-    details p{color:var(--muted);font-size:13px;margin:13px 0 0;line-height:1.8}
-    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px}
-    .contact-info{background:#191a16;color:#fff;border-radius:24px;padding:29px}
-    .contact-info p{color:#c5c4bc;font-size:14px}
-    .contact-line{display:flex;align-items:flex-start;gap:12px;margin-top:20px;font-size:13px}
-    .contact-line span:first-child{color:#e4c782;font-size:17px}
-    .contact-form{border:1px solid var(--line);border-radius:24px;padding:28px;background:#fff}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-    label{font-size:12px;font-weight:800;display:block;margin-bottom:7px}
-    input,select,textarea{font:inherit;font-size:13px;width:100%;border:1px solid #dedbd3;border-radius:11px;padding:13px 14px;background:#fff;outline:none}
-    input:focus,select:focus,textarea:focus{border-color:#bd9145;box-shadow:0 0 0 3px #bd91451c}
-    .form-field{margin-bottom:15px}
-    textarea{min-height:105px;resize:vertical}
-    .contact-form .btn{width:100%}
-    footer{background:#131410;color:#fff;padding:45px 0 22px}
-    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;padding-bottom:35px}
-    footer p,footer a{font-size:12px;color:#bcbab1;line-height:1.9}
-    footer h3{font-size:13px;letter-spacing:0;margin-bottom:12px;color:#f0d99e}
-    .footer-links{display:grid;gap:6px}
-    .copyright{border-top:1px solid #ffffff1a;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:11px;color:#9f9e95}
-    .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;background:#16854b;color:#fff;border-radius:999px;padding:14px 18px;font-size:13px;font-weight:800;box-shadow:0 10px 30px #16854b40}
-    .mobile-cta{display:none}
-    @media(max-width:1000px){.nav-links{gap:13px}.nav-links a{font-size:12px}.services-grid{grid-template-columns:repeat(2,1fr)}.hero-grid{gap:30px}.footer-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:760px){
-      .container{width:min(100% - 30px,560px)}.announcement{font-size:10px}.nav{min-height:68px}.brand{font-size:17px}.brand-mark{width:38px;height:38px}
-      .menu-toggle{display:block}.nav .nav-cta{display:none}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:18px 22px 22px;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 15px 25px #0000000b}
-      .nav-links.open{display:flex}.nav-links a{padding:12px 0;border-bottom:1px solid #f1eee7;font-size:14px}
-      .hero{padding:52px 0 50px}.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.hero-grid{gap:34px}h1{font-size:clamp(39px,11vw,54px)}.lead{font-size:15px}.hero-visual{min-height:370px;padding:19px}.dashboard{padding:16px}.dash-title{font-size:20px}.metric strong{font-size:18px}.floating-note{right:10px;bottom:10px}
-      .section{padding:62px 0}.services-grid{grid-template-columns:1fr}.service-card{min-height:unset}.split{gap:28px}.feature-list{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}.cta-band{padding:27px;align-items:flex-start;flex-direction:column}.form-grid{grid-template-columns:1fr}.contact-form,.contact-info{padding:22px}.footer-grid{grid-template-columns:1fr 1fr;gap:24px}.wa-float{display:none}.mobile-cta{position:fixed;display:flex;bottom:0;left:0;right:0;z-index:70;padding:10px 13px;background:#fff;border-top:1px solid var(--line);gap:10px}.mobile-cta a{flex:1}.mobile-cta .btn{padding:13px 10px;font-size:12px}.copyright{padding-bottom:70px}
-    }
-    @media(max-width:390px){.footer-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr}.hero-actions .btn{width:100%}.feature-list{grid-template-columns:1fr}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfessionalService",
-    "name":"Disa Digital Agency",
-    "url":"https://disadigital.online/",
-    "telephone":"+91-9630958789",
-    "description":"Digital marketing, website development, mobile app development, branding and business growth services.",
-    "areaServed":["Bhopal","Madhya Pradesh","India"],
-    "knowsAbout":["Website Development","Mobile App Development","Search Engine Optimization","Google Ads","Meta Ads","Branding","Social Media Marketing","Lead Generation"]
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff">
+<title>Disa Digital Agency | Digital Marketing, Website & App Development</title>
+<meta name="description" content="Disa Digital Agency is an MSME-registered digital marketing and technology agency offering website development, mobile apps, SEO, Google Ads, Meta Ads, branding and business automation in Bhopal, India.">
+<meta name="author" content="Disa Digital Agency">
+<meta name="application-name" content="Disa Digital Agency">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="light">
+<meta property="og:site_name" content="Disa Digital Agency">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Disa Digital Agency | Digital Marketing & Technology">
+<meta name="twitter:description" content="Website and app development, digital marketing, SEO, paid ads, branding and business growth solutions.">
+<meta name="twitter:image" content="https://disadigital.online/og-image.jpg">
+<meta name="keywords" content="Disa Digital Agency, digital marketing agency, website development, app development, Google Ads, Meta Ads, SEO services, branding, lead generation, Bhopal">
+<link rel="canonical" href="https://disadigital.online/">
+<meta property="og:type" content="website"><meta property="og:title" content="Disa Digital Agency | Build. Market. Grow."><meta property="og:description" content="One partner for digital marketing, websites, apps, branding and business growth."><meta property="og:url" content="https://disadigital.online/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#151515;--muted:#66645f;--gold:#bd9145;--gold2:#e4c782;--cream:#faf8f3;--line:#e9e5dc;--green:#146c43;--white:#fff;--shadow:0 18px 55px rgba(27,25,19,.08);--radius:22px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff;line-height:1.65}a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 40px));margin:auto}.announcement{background:#171714;color:#fff;text-align:center;padding:9px 14px;font-size:12px;letter-spacing:.04em}.announcement a{color:var(--gold2);font-weight:700}header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(233,229,220,.85)}.nav{display:flex;align-items:center;justify-content:space-between;gap:22px;min-height:78px}.brand{display:flex;align-items:center;gap:11px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.04em;font-size:20px}.brand-mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#f4e4b9,#b88635);display:grid;place-items:center;color:#171714;font-size:18px;font-weight:800;box-shadow:0 6px 16px #bd914533}.brand small{display:block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#8a6b35;margin-top:-3px}.nav-links{display:flex;align-items:center;gap:24px;font-size:13px;font-weight:700;color:#45433e}.nav-links a:hover{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 20px;font-weight:700;font-size:13px;transition:.2s ease;border:1px solid transparent;cursor:pointer}.btn:hover{transform:translateY(-2px)}.btn-dark{background:#171714;color:#fff}.btn-gold{background:linear-gradient(135deg,#e8cf92,#b98532);color:#171714}.btn-outline{border-color:#d9d3c6;background:#fff}.menu-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:12px;width:44px;height:44px;font-size:22px}.hero{padding:82px 0 74px;background:radial-gradient(circle at 88% 15%,#f5e9ca 0,transparent 28%),linear-gradient(180deg,#fff 0%,#fbfaf7 100%);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:58px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#86652d;background:#f7f0df;border:1px solid #ead9b4;border-radius:999px;padding:7px 12px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:#1d925c;box-shadow:0 0 0 4px #1d925c1a}h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.14;letter-spacing:-.045em;margin:0}h1{font-size:clamp(40px,5vw,67px);margin:22px 0 20px;font-weight:800}h1 span{background:linear-gradient(100deg,#a77725,#d7b56d);background-clip:text;-webkit-background-clip:text;color:transparent}.lead{font-size:17px;max-width:590px;color:var(--muted);line-height:1.8}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}.trustline{display:flex;gap:20px;flex-wrap:wrap;margin-top:27px;color:#65615a;font-size:12px;font-weight:600}.trustline span{display:flex;align-items:center;gap:7px}.check{color:#16804e}.hero-visual{position:relative;min-height:430px;border-radius:30px;background:#181916;padding:27px;box-shadow:0 28px 75px #211d1530;overflow:hidden}.visual-orb{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,#d7b66e55,transparent 70%);right:-55px;top:-80px}.visual-top{display:flex;align-items:center;justify-content:space-between;color:#fff;font-size:12px;position:relative}.live-pill{border:1px solid #ffffff2b;background:#ffffff0c;border-radius:999px;padding:6px 10px;color:#e5d2a1;font-size:10px}.dashboard{position:relative;margin-top:28px;border:1px solid #ffffff22;border-radius:20px;background:#242520;padding:22px}.dash-label{color:#b7b6ad;font-size:11px}.dash-title{font-size:23px;color:#fff;font-weight:800;font-family:Manrope,sans-serif;margin:3px 0 18px}.metric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.metric{background:#ffffff08;border:1px solid #ffffff12;border-radius:14px;padding:15px}.metric strong{display:block;color:#e6ca83;font-family:Manrope,sans-serif;font-size:20px}.metric span{color:#c6c5be;font-size:11px}.chart{height:90px;display:flex;align-items:end;gap:7px;margin-top:18px;padding:0 4px}.chart i{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(180deg,#e6ca83,#b98b3e);opacity:.9}.floating-note{position:absolute;right:15px;bottom:18px;background:#fff;border:1px solid var(--line);border-radius:15px;padding:12px 15px;box-shadow:var(--shadow);font-size:11px;font-weight:700}.floating-note b{display:block;color:#15804c;font-size:16px}.section{padding:82px 0}.section-soft{background:var(--cream)}.section-head{max-width:720px;margin-bottom:35px}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.17em;color:#987337;font-weight:800;margin-bottom:12px}h2{font-size:clamp(30px,4vw,45px);margin-bottom:15px}.section-head p,.section-copy{color:var(--muted);margin:0;font-size:15px;line-height:1.8}.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.service-card{border:1px solid var(--line);border-radius:var(--radius);padding:23px;background:#fff;transition:.25s;display:flex;flex-direction:column;min-height:265px}.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#ddc58e}.service-icon{width:49px;height:49px;border-radius:15px;background:#f7f0df;display:grid;place-items:center;font-size:22px;margin-bottom:21px}.service-card h3{font-size:18px;letter-spacing:-.025em;margin-bottom:11px}.service-card p{color:var(--muted);font-size:13px;line-height:1.75;margin:0 0 16px}.service-card a{font-size:12px;font-weight:800;color:#8b6628;margin-top:auto}.split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.feature-panel{background:#191a16;border-radius:28px;padding:30px;color:#fff;position:relative;overflow:hidden}.feature-panel h3{font-size:27px;margin-bottom:13px}.feature-panel p{color:#c5c4bc;font-size:14px}.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:23px}.feature-list div{border:1px solid #ffffff1d;background:#ffffff08;border-radius:13px;padding:13px;font-size:12px;color:#f2e8d0}.bullet-list{display:grid;gap:14px;margin-top:25px}.bullet{display:flex;gap:12px;align-items:flex-start}.bullet-mark{width:25px;height:25px;flex:none;border-radius:50%;display:grid;place-items:center;background:#eaf5ee;color:#197647;font-weight:900;font-size:12px}.bullet strong{display:block;font-size:14px;margin-bottom:3px}.bullet p{margin:0;color:var(--muted);font-size:13px}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.process-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff}.process-no{font-family:Manrope,sans-serif;font-size:31px;font-weight:800;color:#d3b46f;margin-bottom:14px}.process-card h3{font-size:17px;margin-bottom:9px}.process-card p{font-size:13px;color:var(--muted);margin:0;line-height:1.7}.industries{display:flex;gap:10px;flex-wrap:wrap}.industry{padding:10px 14px;border-radius:999px;border:1px solid #e6dfd1;background:#fff;font-size:12px;font-weight:700;color:#555148}.cta-band{background:linear-gradient(110deg,#1b1c17,#28271f);border-radius:28px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:25px;color:#fff}.cta-band h2{font-size:clamp(28px,3.6vw,40px);max-width:650px;margin-bottom:10px}.cta-band p{color:#c7c5bb;margin:0;font-size:14px}.faq-list{display:grid;gap:12px;max-width:850px}details{border:1px solid var(--line);border-radius:15px;padding:17px 19px;background:#fff}summary{font-weight:800;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:15px}summary:after{content:"+";font-size:20px;color:#a67b32;line-height:1}details[open] summary:after{content:"−"}details p{color:var(--muted);font-size:13px;margin:13px 0 0;line-height:1.8}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px}.contact-info{background:#191a16;color:#fff;border-radius:24px;padding:29px}.contact-info p{color:#c5c4bc;font-size:14px}.contact-line{display:flex;align-items:flex-start;gap:12px;margin-top:20px;font-size:13px}.contact-line span:first-child{color:#e4c782;font-size:17px}.contact-form{border:1px solid var(--line);border-radius:24px;padding:28px;background:#fff}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}label{font-size:12px;font-weight:800;display:block;margin-bottom:7px}input,select,textarea{font:inherit;font-size:13px;width:100%;border:1px solid #dedbd3;border-radius:11px;padding:13px 14px;background:#fff;outline:none}input:focus,select:focus,textarea:focus{border-color:#bd9145;box-shadow:0 0 0 3px #bd91451c}.form-field{margin-bottom:15px}textarea{min-height:105px;resize:vertical}.contact-form .btn{width:100%}footer{background:#131410;color:#fff;padding:45px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;padding-bottom:35px}footer p,footer a{font-size:12px;color:#bcbab1;line-height:1.9}footer h3{font-size:13px;letter-spacing:0;margin-bottom:12px;color:#f0d99e}.footer-links{display:grid;gap:6px}.copyright{border-top:1px solid #ffffff1a;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:11px;color:#9f9e95}.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;background:#16854b;color:#fff;border-radius:999px;padding:14px 18px;font-size:13px;font-weight:800;box-shadow:0 10px 30px #16854b40}.mobile-cta{display:none}
+@media(max-width:1000px){.nav-links{gap:13px}.nav-links a{font-size:12px}.services-grid{grid-template-columns:repeat(2,1fr)}.hero-grid{gap:30px}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.container{width:min(100% - 30px,560px)}.announcement{font-size:10px}.nav{min-height:68px}.brand{font-size:17px}.brand-mark{width:38px;height:38px}.menu-toggle{display:block}.nav .nav-cta{display:none}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:18px 22px 22px;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 15px 25px #0000000b}.nav-links.open{display:flex}.nav-links a{padding:12px 0;border-bottom:1px solid #f1eee7;font-size:14px}.hero{padding:52px 0 50px}.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.hero-grid{gap:34px}h1{font-size:clamp(39px,11vw,54px)}.lead{font-size:15px}.hero-visual{min-height:370px;padding:19px}.dashboard{padding:16px}.dash-title{font-size:20px}.metric strong{font-size:18px}.floating-note{right:10px;bottom:10px}.section{padding:62px 0}.services-grid{grid-template-columns:1fr}.service-card{min-height:unset}.split{gap:28px}.feature-list{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}.cta-band{padding:27px;align-items:flex-start;flex-direction:column}.form-grid{grid-template-columns:1fr}.contact-form,.contact-info{padding:22px}.footer-grid{grid-template-columns:1fr 1fr;gap:24px}.wa-float{display:none}.mobile-cta{position:fixed;display:flex;bottom:0;left:0;right:0;z-index:70;padding:10px 13px;background:#fff;border-top:1px solid var(--line);gap:10px}.mobile-cta a{flex:1}.mobile-cta .btn{padding:13px 10px;font-size:12px}.copyright{padding-bottom:70px}}
+@media(max-width:390px){.footer-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr}.hero-actions .btn{width:100%}.feature-list{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "@id":"https://disadigital.online/#agency",
+  "name":"Disa Digital Agency",
+  "url":"https://disadigital.online/",
+  "telephone":"+91-9630958789",
+  "description":"MSME-registered digital marketing and technology agency providing website development, mobile app development, SEO, Google Ads, Meta Ads, social media marketing, branding, lead generation and automation solutions.",
+  "areaServed":[
+    {"@type":"City","name":"Bhopal"},
+    {"@type":"AdministrativeArea","name":"Madhya Pradesh"},
+    {"@type":"Country","name":"India"}
+  ],
+  "founder":{"@type":"Person","name":"Samarth Tiwari"},
+  "knowsAbout":[
+    "Website Development","Mobile App Development","E-commerce Development",
+    "Search Engine Optimization","Google Ads","Meta Ads","Social Media Marketing",
+    "Brand Identity Design","Lead Generation","Conversion Tracking",
+    "Business Automation","API Integrations"
+  ],
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Digital Marketing and Technology Services",
+    "itemListElement":[
+      {"@type":"OfferCatalog","name":"Website and E-commerce Development"},
+      {"@type":"OfferCatalog","name":"Mobile App Development"},
+      {"@type":"OfferCatalog","name":"SEO and Digital Marketing"},
+      {"@type":"OfferCatalog","name":"Google Ads and Meta Ads Management"},
+      {"@type":"OfferCatalog","name":"Branding and Creative Design"},
+      {"@type":"OfferCatalog","name":"Lead Generation and Analytics"},
+      {"@type":"OfferCatalog","name":"Business Automation and Integrations"}
+    ]
   }
-  </script>
+}
+</script>
 </head>
 <body>
-  <div class="announcement">WEBSITE • APPS • DIGITAL GROWTH &nbsp; | &nbsp; <a href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20to%20discuss%20a%20project.">Book a free initial consultation ↗</a></div>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#home" aria-label="Disa Digital Agency home"><span class="brand-mark">D</span><span>DISA DIGITAL<small>AGENCY · TECHNOLOGY · GROWTH</small></span></a>
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
-      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-        <a href="#services">Services</a><a href="#about">Why Disa</a><a href="#process">Our Process</a><a href="#industries">Industries</a><a href="#faq">FAQs</a><a href="#contact">Contact</a>
-      </nav>
-      <a class="btn btn-dark nav-cta" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20a%20project%20consultation.">Let's Talk ↗</a>
+<div class="announcement">WEBSITE • APPS • DIGITAL GROWTH &nbsp; | &nbsp; <a href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20to%20discuss%20a%20project.">Book a free initial consultation ↗</a></div>
+<header><div class="container nav"><a class="brand" href="#home" aria-label="Disa Digital Agency home"><span class="brand-mark">D</span><span>DISA DIGITAL<small>AGENCY · TECHNOLOGY · GROWTH</small></span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button><nav class="nav-links" id="navLinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#about">Why Disa</a><a href="#process">Our Process</a><a href="#industries">Industries</a><a href="#products">Our Products</a><a href="#products">Our Products & Course</a><a href="#feedback">Trust & Feedback</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav><a class="btn btn-dark nav-cta" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20a%20project%20consultation.">Let's Talk ↗</a></div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid"><div><div class="eyebrow"><span class="dot"></span> Your Digital Growth Partner</div><h1>Build Your Digital Future. <span>Grow Without Limits.</span></h1><p class="lead">From high-performing websites and mobile apps to digital marketing, paid advertising and brand identity — Disa Digital Agency brings your business technology and growth under one roof.</p><div class="hero-actions"><a class="btn btn-gold" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20a%20free%20initial%20consultation.">Get a Free Consultation ↗</a><a class="btn btn-outline" href="#services">Explore Our Services ↓</a></div><div class="trustline"><span><b class="check">✓</b> Strategy-led solutions</span><span><b class="check">✓</b> Mobile-first experiences</span><span><b class="check">✓</b> One partner, multiple solutions</span><span><b class="check">✓</b> MSME Registered</span></div></div>
+<div class="hero-visual" aria-label="Illustration of a digital growth dashboard"><div class="visual-orb"></div><div class="visual-top"><strong>DISA / GROWTH STUDIO</strong><span class="live-pill">DIGITAL • CREATIVE • TECH</span></div><div class="dashboard"><div class="dash-label">YOUR BUSINESS, CONNECTED</div><div class="dash-title">One Vision. Multiple Solutions.</div><div class="metric-grid"><div class="metric"><strong>WEB</strong><span>Websites & platforms</span></div><div class="metric"><strong>APP</strong><span>Mobile experiences</span></div><div class="metric"><strong>ADS</strong><span>Campaign management</span></div><div class="metric"><strong>SEO</strong><span>Organic visibility</span></div></div><div class="chart" aria-hidden="true"><i style="height:25%"></i><i style="height:38%"></i><i style="height:33%"></i><i style="height:51%"></i><i style="height:47%"></i><i style="height:67%"></i><i style="height:58%"></i><i style="height:82%"></i><i style="height:75%"></i><i style="height:96%"></i></div></div><div class="floating-note">Built around your goals<b>Plan → Build → Grow</b></div></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div class="kicker">One agency. Connected solutions.</div><h2>Everything Your Business Needs to Go Digital</h2><p>Get the right mix of technology, marketing and creative services to build your presence, connect with customers and support sustainable business growth.</p></div><div class="services-grid" id="services">
+<article class="service-card"><div class="service-icon">⌘</div><h3>Website Development</h3><p>Modern business websites, landing pages, e-commerce stores and responsive web experiences designed around your goals.</p><a href="#contact">Discuss a website project ↗</a></article>
+<article class="service-card"><div class="service-icon">▣</div><h3>Mobile App Development</h3><p>Plan and build Android, iOS and cross-platform app experiences, from business apps to customer-facing products.</p><a href="#contact">Discuss an app idea ↗</a></article>
+<article class="service-card"><div class="service-icon">↗</div><h3>Google & Meta Ads</h3><p>Search and social ad campaigns, audience research, creative testing and conversion-focused campaign management.</p><a href="#contact">Plan an ad campaign ↗</a></article>
+<article class="service-card"><div class="service-icon">◎</div><h3>SEO & Organic Growth</h3><p>Technical SEO, on-page optimization, keyword research and content planning to help customers discover your business.</p><a href="#contact">Improve search visibility ↗</a></article>
+<article class="service-card"><div class="service-icon">✳</div><h3>Social Media Marketing</h3><p>Content calendars, social media management, campaign planning and creative assets for consistent brand communication.</p><a href="#contact">Grow your social presence ↗</a></article>
+<article class="service-card"><div class="service-icon">◈</div><h3>Branding & Creative Design</h3><p>Logo and brand identity, promotional graphics, ad creatives and visual systems that make your business recognizable.</p><a href="#contact">Build your brand ↗</a></article>
+<article class="service-card"><div class="service-icon">▤</div><h3>Lead Generation & Analytics</h3><p>Campaign tracking, conversion measurement, landing page improvements and lead-generation strategies for better decisions.</p><a href="#contact">Improve lead quality ↗</a></article>
+<article class="service-card"><div class="service-icon">⚙</div><h3>Business Automation & Integrations</h3><p>Explore workflow automation, API integrations, forms and connected tools that reduce repetitive business tasks.</p><a href="#contact">Explore automation ↗</a></article>
+</div></div></section>
+<section class="section section-soft" id="about"><div class="container split"><div><div class="kicker">Why work with Disa</div><h2>Technology That Works With Your Business Goals</h2><p class="section-copy">Your digital presence is more than a website or an ad. It is how customers discover you, understand your value and decide to get in touch. We connect the pieces into a clear, practical plan.</p><div class="bullet-list">
+<div class="bullet"><span class="bullet-mark">✓</span><div><strong>Solutions tailored to your business</strong><p>Prioritize the services and features that fit your audience, goals and budget.</p></div></div><div class="bullet"><span class="bullet-mark">✓</span><div><strong>Connected digital services</strong><p>Bring development, marketing and creative work together with a consistent direction.</p></div></div><div class="bullet"><span class="bullet-mark">✓</span><div><strong>Clear communication</strong><p>Understand project scope, priorities and next steps before work begins.</p></div></div><div class="bullet"><span class="bullet-mark">✓</span><div><strong>Built for mobile users</strong><p>Responsive layouts that keep key information and contact options easy to access.</p></div></div></div></div><div class="feature-panel"><div class="kicker">Your digital partner</div><h3>From First Idea to Online Growth</h3><p>Whether you are launching a new business or improving an existing one, start with a conversation about what you need most.</p><div class="feature-list"><div>01 / Strategy & planning</div><div>02 / Design & development</div><div>03 / Marketing & launch</div><div>04 / Measure & improve</div></div></div></div></section>
+<section class="section" id="process"><div class="container"><div class="section-head"><div class="kicker">A clear path forward</div><h2>How We Work</h2><p>A straightforward process designed to align expectations, reduce confusion and keep the project moving.</p></div><div class="process-grid"><article class="process-card"><div class="process-no">01</div><h3>Discover</h3><p>We learn about your business, audience, goals, timeline and requirements.</p></article><article class="process-card"><div class="process-no">02</div><h3>Plan</h3><p>We outline the scope, priorities, deliverables and an appropriate approach.</p></article><article class="process-card"><div class="process-no">03</div><h3>Build & Launch</h3><p>We create the agreed solution and prepare it for launch or campaign activation.</p></article><article class="process-card"><div class="process-no">04</div><h3>Improve</h3><p>Where applicable, review performance and identify practical next steps.</p></article></div></div></section>
+<section class="section section-soft" id="industries"><div class="container"><div class="section-head"><div class="kicker">Who we help</div><h2>Digital Solutions for Different Industries</h2><p>Flexible digital services for businesses at different stages of growth.</p></div><div class="industries"><span class="industry">Real Estate</span><span class="industry">Retail & E-commerce</span><span class="industry">Education & Coaching</span><span class="industry">Healthcare & Clinics</span><span class="industry">Professional Services</span><span class="industry">Hospitality</span><span class="industry">Startups</span><span class="industry">Local Businesses</span><span class="industry">Creators & Personal Brands</span></div></div></section>
+<section class="section"><div class="container"><div class="cta-band"><div><div class="kicker">Have a project in mind?</div><h2>Let's Turn Your Next Idea Into a Digital Solution.</h2><p>Tell us what you want to build, improve or promote. Start with a free initial consultation.</p></div><a class="btn btn-gold" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20to%20discuss%20my%20project.">Discuss Your Project ↗</a></div></div></section>
+
+<section class="section" id="products">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Built by our team</div><h2>Our Digital Products & Learning</h2><p>Alongside client services, Disa is developing digital products and learning resources. Explore the projects below or contact us for more information.</p></div>
+    <div class="services-grid">
+      <article class="service-card"><div class="service-icon">◉</div><h3>Disa Online</h3><p>A Disa digital product initiative. Ask our team for the latest product details, availability and access information.</p><a href="https://wa.me/919630958789?text=Hi%20Disa%2C%20please%20share%20details%20about%20Disa%20Online." target="_blank" rel="noopener">Ask about Disa Online ↗</a></article>
+      <article class="service-card"><div class="service-icon">✦</div><h3>Apna Kaam Get Reward</h3><p>A product initiative focused on work and rewards. Contact us for current features, availability and official access details.</p><a href="https://wa.me/919630958789?text=Hi%20Disa%2C%20please%20share%20details%20about%20Apna%20Kaam%20Get%20Reward." target="_blank" rel="noopener">Explore the project ↗</a></article>
+      <article class="service-card"><div class="service-icon">◌</div><h3>Pulse Chat</h3><p>A communication-focused digital product concept from our product portfolio. Ask our team for its current status and details.</p><a href="https://wa.me/919630958789?text=Hi%20Disa%2C%20please%20share%20details%20about%20Pulse%20Chat." target="_blank" rel="noopener">Ask about Pulse Chat ↗</a></article>
+      <article class="service-card"><div class="service-icon">▣</div><h3>Disa Digital Study</h3><p>Learn digital marketing with our course covering practical digital marketing concepts. Course price: ₹799.</p><a href="https://disadigitastudy.online/" target="_blank" rel="noopener">Explore the ₹799 course ↗</a></article>
     </div>
-  </header>
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow"><span class="dot"></span> Your Digital Growth Partner</div>
-          <h1>Build Your Digital Future. <span>Grow Without Limits.</span></h1>
-          <p class="lead">From high-performing websites and mobile apps to digital marketing, paid advertising and brand identity — Disa Digital Agency brings your business technology and growth under one roof.</p>
-          <div class="hero-actions"><a class="btn btn-gold" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20a%20free%20initial%20consultation.">Get a Free Consultation ↗</a><a class="btn btn-outline" href="#services">Explore Our Services ↓</a></div>
-          <div class="trustline"><span><b class="check">✓</b> Strategy-led solutions</span><span><b class="check">✓</b> Mobile-first experiences</span><span><b class="check">✓</b> One partner, multiple solutions</span></div>
-        </div>
-        <div class="hero-visual" aria-label="Illustration of a digital growth dashboard">
-          <div class="visual-orb"></div><div class="visual-top"><strong>DISA / GROWTH STUDIO</strong><span class="live-pill">DIGITAL • CREATIVE • TECH</span></div>
-          <div class="dashboard"><div class="dash-label">YOUR BUSINESS, CONNECTED</div><div class="dash-title">One Vision. Multiple Solutions.</div>
-            <div class="metric-grid"><div class="metric"><strong>WEB</strong><span>Websites & platforms</span></div><div class="metric"><strong>APP</strong><span>Mobile experiences</span></div><div class="metric"><strong>ADS</strong><span>Campaign management</span></div><div class="metric"><strong>SEO</strong><span>Organic visibility</span></div></div>
-            <div class="chart" aria-hidden="true"><i style="height:25%"></i><i style="height:38%"></i><i style="height:33%"></i><i style="height:51%"></i><i style="height:47%"></i><i style="height:67%"></i><i style="height:58%"></i><i style="height:82%"></i><i style="height:75%"></i><i style="height:96%"></i></div>
-          </div><div class="floating-note">Built around your goals<b>Plan → Build → Grow</b></div>
-        </div>
-      </div>
-    </section>
+  </div>
+</section>
+<section class="section section-soft" id="feedback">
+  <div class="container split">
+    <div><div class="kicker">Trust through transparency</div><h2>Real Work. Honest Feedback.</h2><p class="section-copy">We believe client trust should be built on real project outcomes and genuine experiences. We publish only feedback that comes from actual clients and is shared with permission—not invented ratings or testimonials.</p><div class="bullet-list">
+      <div class="bullet"><span class="bullet-mark">✓</span><div><strong>Clear project scope</strong><p>Understand deliverables, timelines and responsibilities before work starts.</p></div></div>
+      <div class="bullet"><span class="bullet-mark">✓</span><div><strong>Practical communication</strong><p>Discuss requirements directly with our team and agree on next steps.</p></div></div>
+      <div class="bullet"><span class="bullet-mark">✓</span><div><strong>Genuine client feedback</strong><p>Ask us for relevant project examples or available references during your consultation.</p></div></div>
+    </div></div>
+    <div class="feature-panel"><div class="kicker">MSME Registered</div><h3>A Business Partner for Your Digital Journey</h3><p>Disa Digital Agency identifies as an MSME-registered business. Registration details can be shared with prospective clients on request.</p><div class="feature-list"><div>Website & app projects</div><div>Marketing campaigns</div><div>Branding & creatives</div><div>Digital learning</div></div><a class="btn btn-gold" style="margin-top:22px" href="https://wa.me/919630958789?text=Hi%20Disa%2C%20I%20would%20like%20to%20discuss%20a%20project%20and%20request%20business%20details." target="_blank" rel="noopener">Talk to Our Team ↗</a></div>
+  </div>
+</section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head"><div class="kicker">One agency. Connected solutions.</div><h2>Everything Your Business Needs to Go Digital</h2><p>Get the right mix of technology, marketing and creative services to build your presence, connect with customers and support sustainable business growth.</p></div>
-        <div class="services-grid" id="services">
-          <article class="service-card"><div class="service-icon">⌘</div><h3>Website Development</h3><p>Modern business websites, landing pages, e-commerce stores and responsive web experiences designed around your goals.</p><a href="#contact">Discuss a website project ↗</a></article>
-          <article class="service-card"><div class="service-icon">▣</div><h3>Mobile App Development</h3><p>Plan and build Android, iOS and cross-platform app experiences, from business apps to customer-facing products.</p><a href="#contact">Discuss an app idea ↗</a></article>
-          <article class="service-card"><div class="service-icon">↗</div><h3>Google & Meta Ads</h3><p>Search and social ad campaigns, audience research, creative testing and conversion-focused campaign management.</p><a href="#contact">Plan an ad campaign ↗</a></article>
-          <article class="service-card"><div class="service-icon">◎</div><h3>SEO & Organic Growth</h3><p>Technical SEO, on-page optimization, keyword research and content planning to help customers discover your business.</p><a href="#contact">Improve search visibility ↗</a></article>
-          <article class="service-card"><div class="service-icon">✳</div><h3>Social Media Marketing</h3><p>Content calendars, social media management, campaign planning and creative assets for consistent brand communication.</p><a href="#contact">Grow your social presence ↗</a></article>
-          <article class="service-card"><div class="service-icon">◈</div><h3>Branding & Creative Design</h3><p>Logo and brand identity, promotional graphics, ad creatives and visual systems that make your business recognizable.</p><a href="#contact">Build your brand ↗</a></article>
-          <article class="service-card"><div class="service-icon">▤</div><h3>Lead Generation & Analytics</h3><p>Campaign tracking, conversion measurement, landing page improvements and lead-generation strategies for better decisions.</p><a href="#contact">Improve lead quality ↗</a></article>
-          <article class="service-card"><div class="service-icon">⚙</div><h3>Business Automation & Integrations</h3><p>Explore workflow automation, API integrations, forms and connected tools that reduce repetitive business tasks.</p><a href="#contact">Explore automation ↗</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="about">
-      <div class="container split">
-        <div><div class="kicker">Why work with Disa</div><h2>Technology That Works With Your Business Goals</h2><p class="section-copy">Your digital presence is more than a website or an ad. It is how customers discover you, understand your value and decide to get in touch. We connect the pieces into a clear, practical plan.</p>
-          <div class="bullet-list">
-            <div class="bullet"><span class="bullet-mark">✓</span><div><strong>Solutions tailored to your business</strong><p>Prioritize the services and features that fit your audience, goals and budget.</p></div></div>
-            <div class="bullet"><span class="bullet-mark">✓</span><div><strong>Connected digital services</strong><p>Bring development, marketing and creative work together with a consistent direction.</p></div></div>
-            <div class="bullet"><span class="bullet-mark">✓</span><div><strong>Clear communication</strong><p>Understand project scope, priorities and next steps before work begins.</p></div></div>
-            <div class="bullet"><span class="bullet-mark">✓</span><div><strong>Built for mobile users</strong><p>Responsive layouts that keep key information and contact options easy to access.</p></div></div>
-          </div>
-        </div>
-        <div class="feature-panel"><div class="kicker">Your digital partner</div><h3>From First Idea to Online Growth</h3><p>Whether you are launching a new business or improving an existing one, start with a conversation about what you need most.</p><div class="feature-list"><div>01 / Strategy & planning</div><div>02 / Design & development</div><div>03 / Marketing & launch</div><div>04 / Measure & improve</div></div></div>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <div class="container"><div class="section-head"><div class="kicker">A clear path forward</div><h2>How We Work</h2><p>A straightforward process designed to align expectations, reduce confusion and keep the project moving.</p></div>
-        <div class="process-grid">
-          <article class="process-card"><div class="process-no">01</div><h3>Discover</h3><p>We learn about your business, audience, goals, timeline and requirements.</p></article>
-          <article class="process-card"><div class="process-no">02</div><h3>Plan</h3><p>We outline the scope, priorities, deliverables and an appropriate approach.</p></article>
-          <article class="process-card"><div class="process-no">03</div><h3>Build & Launch</h3><p>We create the agreed solution and prepare it for launch or campaign activation.</p></article>
-          <article class="process-card"><div class="process-no">04</div><h3>Improve</h3><p>Where applicable, review performance and identify practical next steps.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="industries">
-      <div class="container"><div class="section-head"><div class="kicker">Who we help</div><h2>Digital Solutions for Different Industries</h2><p>Flexible digital services for businesses at different stages of growth.</p></div>
-        <div class="industries"><span class="industry">Real Estate</span><span class="industry">Retail & E-commerce</span><span class="industry">Education & Coaching</span><span class="industry">Healthcare & Clinics</span><span class="industry">Professional Services</span><span class="industry">Hospitality</span><span class="industry">Startups</span><span class="industry">Local Businesses</span><span class="industry">Creators & Personal Brands</span></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container"><div class="cta-band"><div><div class="kicker">Have a project in mind?</div><h2>Let's Turn Your Next Idea Into a Digital Solution.</h2><p>Tell us what you want to build, improve or promote. Start with a free initial consultation.</p></div><a class="btn btn-gold" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20to%20discuss%20my%20project.">Discuss Your Project ↗</a></div></div>
-    </section>
-
-    <section class="section section-soft" id="faq">
-      <div class="container"><div class="section-head"><div class="kicker">FAQs</div><h2>Frequently Asked Questions</h2><p>Quick answers to common questions about our digital services.</p></div>
-        <div class="faq-list">
-          <details><summary>What services does Disa Digital Agency provide?</summary><p>Services include website and app development, Google and Meta Ads, SEO, social media marketing, branding, creative design, lead generation, analytics and selected business automation solutions.</p></details>
-          <details><summary>Can I hire you for just one service?</summary><p>Yes. You can discuss a single project or combine services based on your requirements and budget.</p></details>
-          <details><summary>Do you work with small businesses and startups?</summary><p>Yes, we can discuss solutions for small businesses, startups, local businesses and growing brands.</p></details>
-          <details><summary>How much do website or app projects cost?</summary><p>Pricing depends on scope, features, integrations, content and timeline. Contact us with your requirements to discuss an appropriate estimate.</p></details>
-          <details><summary>How do I get started?</summary><p>Send us a message on WhatsApp or use the inquiry form. Share your goals and we can discuss possible next steps.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container"><div class="section-head"><div class="kicker">Let's talk</div><h2>Tell Us About Your Project</h2><p>Share a few details and open a pre-filled inquiry on WhatsApp to start the conversation.</p></div>
-        <div class="contact-grid">
-          <div class="contact-info"><h3 style="font-size:25px">Let's build something meaningful.</h3><p>Tell us what you need help with. We’ll use your details to understand the project and discuss the next step.</p>
-            <div class="contact-line"><span>✉</span><div><strong>Project inquiries</strong><br>Start a conversation on WhatsApp</div></div>
-            <div class="contact-line"><span>◷</span><div><strong>Consultation</strong><br>Free initial discussion</div></div>
-            <div class="contact-line"><span>⌖</span><div><strong>Serving</strong><br>Bhopal, Madhya Pradesh & India (remote projects subject to scope)</div></div>
-            <a class="btn btn-gold" style="margin-top:25px" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20have%20a%20project%20inquiry.">Chat on WhatsApp ↗</a>
-          </div>
-          <form class="contact-form" id="inquiryForm">
-            <div class="form-grid"><div class="form-field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Enter your name"></div><div class="form-field"><label for="phone">Phone number *</label><input id="phone" name="phone" required inputmode="tel" placeholder="+91 XXXXX XXXXX"></div></div>
-            <div class="form-grid"><div class="form-field"><label for="service">Service you need *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Website Development</option><option>Mobile App Development</option><option>Google Ads</option><option>Meta Ads</option><option>SEO</option><option>Social Media Marketing</option><option>Branding & Creative Design</option><option>Lead Generation & Analytics</option><option>Business Automation</option><option>Multiple Services / Not Sure</option></select></div><div class="form-field"><label for="budget">Approximate budget</label><select id="budget" name="budget"><option value="">Select budget (optional)</option><option>Under ₹10,000</option><option>₹10,000–₹25,000</option><option>₹25,000–₹50,000</option><option>₹50,000+</option><option>Need guidance</option></select></div></div>
-            <div class="form-field"><label for="message">Project details *</label><textarea id="message" name="message" required placeholder="Tell us what you want to build, market or improve"></textarea></div>
-            <button class="btn btn-dark" type="submit">Send Inquiry on WhatsApp ↗</button>
-            <p style="font-size:11px;color:#777;margin:12px 0 0">This form opens WhatsApp with your inquiry details. It does not submit data to a website database.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="container"><div class="footer-grid">
-      <div><a class="brand" href="#home"><span class="brand-mark">D</span><span>DISA DIGITAL<small>AGENCY · TECHNOLOGY · GROWTH</small></span></a><p>Digital marketing, development and creative solutions to help businesses build a stronger digital presence.</p></div>
-      <div><h3>Development</h3><div class="footer-links"><a href="#services">Website Development</a><a href="#services">App Development</a><a href="#services">Business Automation</a></div></div>
-      <div><h3>Marketing</h3><div class="footer-links"><a href="#services">Google & Meta Ads</a><a href="#services">SEO Services</a><a href="#services">Social Media Marketing</a></div></div>
-      <div><h3>Company</h3><div class="footer-links"><a href="#about">Why Disa</a><a href="#process">Our Process</a><a href="#faq">FAQs</a><a href="#contact">Contact</a><a href="https://wa.me/919630958789">WhatsApp</a></div></div>
-    </div><div class="copyright"><span>© <span id="year"></span> Disa Digital Agency. All rights reserved.</span><span>Built for digital-first businesses.</span></div></div>
-  </footer>
-  <a class="wa-float" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20to%20discuss%20a%20project." aria-label="Chat with Disa Digital Agency on WhatsApp">WhatsApp ↗</a>
-  <div class="mobile-cta"><a class="btn btn-outline" href="#services">Explore Services</a><a class="btn btn-gold" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20a%20consultation.">Get Consultation ↗</a></div>
-  <script>
-    const menuButton=document.querySelector('.menu-toggle');
-    const navLinks=document.querySelector('.nav-links');
-    menuButton.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'×':'☰';});
-    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰';}));
-    document.getElementById('year').textContent=new Date().getFullYear();
-    document.getElementById('inquiryForm').addEventListener('submit',function(e){
-      e.preventDefault();
-      const data=new FormData(this);
-      const msg=`Hello Disa Digital Agency!%0A%0AName: ${encodeURIComponent(data.get('name'))}%0APhone: ${encodeURIComponent(data.get('phone'))}%0AService: ${encodeURIComponent(data.get('service'))}%0ABudget: ${encodeURIComponent(data.get('budget')||'Not specified')}%0AProject details: ${encodeURIComponent(data.get('message'))}`;
-      window.open('https://wa.me/919630958789?text='+msg,'_blank','noopener');
-    });
-  </script>
-</body>
-</html>
+<section class="section section-soft" id="faq"><div class="container"><div class="section-head"><div class="kicker">FAQs</div><h2>Frequently Asked Questions</h2><p>Quick answers to common questions about our digital services.</p></div><div class="faq-list">
+<details><summary>What services does Disa Digital Agency provide?</summary><p>Services include website and app development, Google and Meta Ads, SEO, social media marketing, branding, creative design, lead generation, analytics and selected business automation solutions.</p></details>
+<details><summary>Can I hire you for just one service?</summary><p>Yes. You can discuss a single project or combine services based on your requirements and budget.</p></details>
+<details><summary>Do you work with small businesses and startups?</summary><p>Yes, we can discuss solutions for small businesses, startups, local businesses and growing brands.</p></details>
+<details><summary>How much do website or app projects cost?</summary><p>Pricing depends on scope, features, integrations, content and timeline. Contact us with your requirements to discuss an appropriate estimate.</p></details>
+<details><summary>Is Disa Digital Agency MSME registered?</summary><p>Disa Digital Agency identifies as an MSME-registered business. You can contact the team to request registration details.</p></details>
+<details><summary>Does Disa Digital Agency offer a digital marketing course?</summary><p>Yes. Disa Digital Study offers a digital marketing course listed at ₹799. Visit https://disadigitastudy.online/ for course information.</p></details>
+<details><summary>Can you guarantee first-page Google rankings?</summary><p>No agency can honestly guarantee a specific Google ranking. We focus on sound technical SEO, useful content, relevant keywords, structured data and ongoing measurement.</p></details>
+<details><summary>How do I get started?</summary><p>Send us a message on WhatsApp or use the inquiry form. Share your goals and we can discuss possible next steps.</p></details>
+</div></div></section>
+<section class="section" id="contact"><div class="container"><div class="section-head"><div class="kicker">Let's talk</div><h2>Tell Us About Your Project</h2><p>Share a few details and open a pre-filled inquiry on WhatsApp to start the conversation.</p></div><div class="contact-grid">
+<div class="contact-info"><h3 style="font-size:25px">Let's build something meaningful.</h3><p>Tell us what you need help with. We’ll use your details to understand the project and discuss the next step.</p><div class="contact-line"><span>✉</span><div><strong>Project inquiries</strong><br>Start a conversation on WhatsApp</div></div><div class="contact-line"><span>◷</span><div><strong>Consultation</strong><br>Free initial discussion</div></div><div class="contact-line"><span>⌖</span><div><strong>Serving</strong><br>Bhopal, Madhya Pradesh & India (remote projects subject to scope)</div></div><a class="btn btn-gold" style="margin-top:25px" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20have%20a%20project%20inquiry.">Chat on WhatsApp ↗</a></div>
+<form class="contact-form" id="inquiryForm"><div class="form-grid"><div class="form-field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Enter your name"></div><div class="form-field"><label for="phone">Phone number *</label><input id="phone" name="phone" required inputmode="tel" placeholder="+91 XXXXX XXXXX"></div></div><div class="form-grid"><div class="form-field"><label for="service">Service you need *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Website Development</option><option>Mobile App Development</option><option>Google Ads</option><option>Meta Ads</option><option>SEO</option><option>Social Media Marketing</option><option>Branding & Creative Design</option><option>Lead Generation & Analytics</option><option>Business Automation</option><option>Multiple Services / Not Sure</option></select></div><div class="form-field"><label for="budget">Approximate budget</label><select id="budget" name="budget"><option value="">Select budget (optional)</option><option>Under ₹10,000</option><option>₹10,000–₹25,000</option><option>₹25,000–₹50,000</option><option>₹50,000+</option><option>Need guidance</option></select></div></div><div class="form-field"><label for="message">Project details *</label><textarea id="message" name="message" required placeholder="Tell us what you want to build, market or improve"></textarea></div><button class="btn btn-dark" type="submit">Send Inquiry on WhatsApp ↗</button><p style="font-size:11px;color:#777;margin:12px 0 0">This form opens WhatsApp with your inquiry details. It does not submit data to a website database.</p></form>
+</div></div></section>
+</main>
+<footer><div class="container"><div class="footer-grid"><div><a class="brand" href="#home"><span class="brand-mark">D</span><span>DISA DIGITAL<small>AGENCY · TECHNOLOGY · GROWTH</small></span></a><p>Digital marketing, development and creative solutions to help businesses build a stronger digital presence.</p></div><div><h3>Development</h3><div class="footer-links"><a href="#services">Website Development</a><a href="#services">App Development</a><a href="#services">Business Automation</a></div></div><div><h3>Marketing</h3><div class="footer-links"><a href="#services">Google & Meta Ads</a><a href="#services">SEO Services</a><a href="#services">Social Media Marketing</a></div></div><div><h3>Company</h3><div class="footer-links"><a href="#about">Why Disa</a><a href="#process">Our Process</a><a href="#products">Our Products & Course</a><a href="#feedback">Trust & Feedback</a><a href="#faq">FAQs</a><a href="#contact">Contact</a><a href="https://wa.me/919630958789">WhatsApp</a></div></div></div><div class="copyright"><span>© <span id="year"></span> Disa Digital Agency. All rights reserved.</span><span>Built for digital-first businesses.</span></div></div></footer>
+<a class="wa-float" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20to%20discuss%20a%20project." aria-label="Chat with Disa Digital Agency on WhatsApp">WhatsApp ↗</a><div class="mobile-cta"><a class="btn btn-outline" href="#services">Explore Services</a><a class="btn btn-gold" href="https://wa.me/919630958789?text=Hi%20Disa%20Digital%20Agency%2C%20I%20want%20a%20consultation.">Get Consultation ↗</a></div>
+<script>
+const menuButton=document.querySelector('.menu-toggle'),navLinks=document.querySelector('.nav-links');
+menuButton.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'×':'☰';});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('inquiryForm').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const msg=`Hello Disa Digital Agency!%0A%0AName: ${encodeURIComponent(d.get('name'))}%0APhone: ${encodeURIComponent(d.get('phone'))}%0AService: ${encodeURIComponent(d.get('service'))}%0ABudget: ${encodeURIComponent(d.get('budget')||'Not specified')}%0AProject details: ${encodeURIComponent(d.get('message'))}`;window.open('https://wa.me/919630958789?text='+msg,'_blank','noopener');});
+</script></body></html>
